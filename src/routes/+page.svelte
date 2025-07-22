@@ -1,14 +1,7 @@
 <script lang="ts">
-	import { thingie } from '$lib/index.js';
-
-	let el = $state<HTMLDivElement>();
-	$effect(() => {
-		if (el) {
-			return thingie(el, { name: 'thingie' });
-		}
-	});
+  import Thingie from '$lib/thingie.svelte';
 </script>
 
 <div class="index">
-	<div class="content" bind:this={el}></div>
+  <Thingie name="hello" />
 </div>
