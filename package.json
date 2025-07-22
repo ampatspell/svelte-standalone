@@ -11,7 +11,8 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"format": "prettier --write .",
 		"lint": "prettier --check . && eslint .",
-		"standalone": "tsx ./standalone/build.ts"
+		"standalone": "tsx ./standalone/build.ts",
+		"build:standalone": "vite build -c vite.config.standalone.ts --mode production"
 	},
 	"files": [
 		"dist",
@@ -52,7 +53,9 @@
 		"svelte-check": "^4.0.0",
 		"typescript": "^5.0.0",
 		"typescript-eslint": "^8.20.0",
-		"vite": "^7.0.4"
+		"vite": "^7.0.4",
+		"vite-plugin-lib-inject-css": "^2.2.2",
+		"vite-plugin-singlefile": "^2.3.0"
 	},
 	"keywords": [
 		"svelte"
